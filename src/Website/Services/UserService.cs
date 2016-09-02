@@ -5,8 +5,17 @@ using System.Threading.Tasks;
 
 namespace Website.Services
 {
-    public class UserService : IUserService
+    public class UserService : IUserService, IDisposable
     {
+        public UserService(INotificationService notificationService)
+        {
+            string msg = notificationService.Msg;
+        }
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public void LogOut()
         {
 

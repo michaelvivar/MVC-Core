@@ -37,7 +37,7 @@ namespace Website
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            Service.DependencyInjection(services);
+            Register.DependencyInjection(services);
 
             services.AddMvc();
         }

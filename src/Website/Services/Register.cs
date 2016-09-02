@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Website.Services
 {
-    public static class Service
+    public static class Register
     {
         public static void DependencyInjection(IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<INotificationService, NotificationService>();
         }
     }
 }
